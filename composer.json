@@ -2,15 +2,20 @@
     "name": "astralprogrammer/laravel-simple-user-management",
     "type": "project",
     "description": "Simple user-management app using laravel",
-    "keywords": ["user", "laravel", "management"],
+    "keywords": [
+        "user",
+        "laravel",
+        "management"
+    ],
     "license": "GPL-3.0-only",
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "8.4",
-        "laravel/tinker": "^2.5"
+        "laravel/framework": "^8.4",
+        "laravel/tinker": "^2.5",
+        "tcg/voyager": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -55,5 +60,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "hooks": {
+            "type": "composer",
+            "url": "https://larapack.io"
+        }
+    }
 }
