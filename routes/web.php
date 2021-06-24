@@ -14,15 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('dashboard');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/users', function () {
-    return view('users');
-})->middleware(['auth'])->name('users');
+Route::resource('users', \App\Http\Controllers\UserController::class)->middleware(['auth', 'access_roles']);
 
 require __DIR__.'/auth.php';
