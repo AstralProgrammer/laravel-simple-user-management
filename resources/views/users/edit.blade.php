@@ -48,9 +48,9 @@
               <x-label for="role" :value="__('Role')"/>
               <select id="role"
                       class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                      type="role" name="role" :value="old('role')" required>
-                <option value="staff">Staff</option>
-                <option value="admin">Admin</option>
+                      name="role" :value="$user['role']" required>
+                <option value="staff" @if($user['role'] === 'staff')selected="selected"@endif>Staff</option>
+                <option value="admin" @if($user['role'] === 'admin')selected="selected"@endif>Admin</option>
               </select>
             </div>
 

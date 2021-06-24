@@ -6,7 +6,7 @@
       </a>
     </x-slot>
 
-    <h2>Registration Form</h2>
+    <h2>{{__('Registration Form')}}</h2>
 
     <!-- Validation Errors -->
     <x-auth-validation-errors class="mb-4" :errors="$errors"/>
